@@ -1,0 +1,52 @@
+/* 画面の下部に配置 */
+#bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+#displayArea {
+    /* 画像を画面の中央に配置する */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+
+    font-family: 'Noto Serif JP', serif;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+#answerArea {
+    /* 画像を画面の中央に配置する */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 15px;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 72px;
+    font-weight: 700;
+}
+
+/**/
+.button {
+    border: 1px solid aqua;
+    background-color: aqua;
+    /* 角を丸くする*/
+    border-radius: 20px;
+    width : 100px;
+    margin: 10px;
+    padding: 20px;
+
+    /* font-family: 'Noto Serif JP', serif;
+    font-family: 'Noto Serif JP', serif; */
+    font-family: 'Sawarabi Gothic', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+}

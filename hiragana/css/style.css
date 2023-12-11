@@ -1,0 +1,27 @@
+#mainpart {
+    /* 中央寄せにする */
+    text-align: center;
+    /* ボタンの両端を丸くする。 */
+
+}
+
+.moji {
+    font-size: 20px;
+    color: black;
+    /* ボタンの両端を丸くする。 */
+    border-radius: 60px;
+    width : 90px;
+    height : 60px;
+    margin : 5px;
+    /* 薄い黄色 */
+    background-color: #EEEE99;
+}
+
+.moji:hover
+{
+    background-color: #FFEE88;
+}
+
+.moji:active {
+	background-color: #FFFF77;
+}

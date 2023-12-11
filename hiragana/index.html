@@ -1,0 +1,111 @@
+<html>
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet" href="css/style.css">
+        <meta charset="UTF-8">
+        <meta name="description" content="平仮名学習">
+    </head>
+    <body>
+        <script>
+
+            function checkFileExists(soundFile, callback) {
+                var xhr = new XMLHttpRequest();
+                xhr.open('HEAD', soundFile, true);
+
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4) {
+                        // HTTP ステータスが 200 OK または 304 Not Modified ならファイルは存在するとみなす
+                        if (xhr.status == 200 || xhr.status == 304) {
+                            callback(true);
+                        } else {
+                            callback(false);
+                        }
+                    }
+                };
+
+                xhr.send();
+            }
+            // サウンドファイルを再生する。
+            function playsound(soundFile)
+            {
+                checkFileExists(soundFile, function (exists) {
+                    if (exists) {
+                        var audio = new Audio(soundFile);
+                        audio.play();
+                    } else {
+                        console.error('File does not exist: ' + soundFile);
+                        // ファイルが存在しない場合のエラーハンドリングを追加できます
+                    }
+                });            }
+        </script>
+        <div id="header"></div>
+        <div id="mainpart">
+            <p>
+                <button class="moji" onclick="playsound('あ.mp3')">あ</button>
+                <button class="moji" onclick="playsound('い.mp3')">い</button>
+                <button class="moji" onclick="playsound('う.mp3')">う</button>
+                <button class="moji" onclick="playsound('え.mp3')">え</button>
+                <button class="moji" onclick="playsound('お.mp3')">お</button>
+            </p>
+            <p>
+                <button class="moji" onclick="playsound('か.mp3')">か</button>
+                <button class="moji" onclick="playsound('き.mp3')">き</button>
+                <button class="moji" onclick="playsound('く.mp3')">く</button>
+                <button class="moji" onclick="playsound('け.mp3')">け</button>
+                <button class="moji" onclick="playsound('こ.mp3')">こ</button>
+            </p>
+            <p>
+                <button class="moji" onclick="playsound('さ.mp3')">さ</button>
+                <button class="moji" onclick="playsound('し.mp3')">し</button>
+                <button class="moji" onclick="playsound('す.mp3')">す</button>
+                <button class="moji" onclick="playsound('せ.mp3')">せ</button>
+                <button class="moji" onclick="playsound('そ.mp3')">そ</button>
+            </p>
+            <p>
+                <button class="moji" onclick="playsound('た.mp3')">た</button>
+                <button class="moji" onclick="playsound('ち.mp3')">ち</button>
+                <button class="moji" onclick="playsound('つ.mp3')">つ</button>
+                <button class="moji" onclick="playsound('て.mp3')">て</button>
+                <button class="moji" onclick="playsound('と.mp3')">と</button>
+            </p>
+            <p>
+                <button class="moji" onclick="playsound('な.mp3')">な</button>
+                <button class="moji" onclick="playsound('に.mp3')">に</button>
+                <button class="moji" onclick="playsound('ぬ.mp3')">ぬ</button>
+                <button class="moji" onclick="playsound('ね.mp3')">ね</button>
+                <button class="moji" onclick="playsound('の.mp3')">の</button>
+            </p>
+            <p>
+                <button class="moji" onclick="playsound('は.mp3')">は</button>
+                <button class="moji" onclick="playsound('ひ.mp3')">ひ</button>
+                <button class="moji" onclick="playsound('ふ.mp3')">ふ</button>
+                <button class="moji" onclick="playsound('へ.mp3')">へ</button>
+                <button class="moji" onclick="playsound('ほ.mp3')">ほ</button>
+            </p>
+            <p>
+                <button class="moji" onclick="playsound('ま.mp3')">ま</button>
+                <button class="moji" onclick="playsound('み.mp3')">み</button>
+                <button class="moji" onclick="playsound('む.mp3')">む</button>
+                <button class="moji" onclick="playsound('め.mp3')">め</button>
+                <button class="moji" onclick="playsound('も.mp3')">も</button>
+            </p>
+            <p>
+                <button class="moji" onclick="playsound('や.mp3')">や</button>
+                <button class="moji" onclick="playsound('ゆ.mp3')">ゆ</button>
+                <button class="moji" onclick="playsound('よ.mp3')">よ</button>
+            </p>
+            <p>
+                <button class="moji" onclick="playsound('ら.mp3')">ら</button>
+                <button class="moji" onclick="playsound('り.mp3')">り</button>
+                <button class="moji" onclick="playsound('る.mp3')">る</button>
+                <button class="moji" onclick="playsound('れ.mp3')">れ</button>
+                <button class="moji" onclick="playsound('ろ.mp3')">ろ</button>
+            </p>
+            <p>
+                <button class="moji" onclick="playsound('わ.mp3')">わ</button>
+                <button class="moji" onclick="playsound('を.mp3')">を</button>
+                <button class="moji" onclick="playsound('ん.mp3')">ん</button>
+            </p>
+        </div>
+    </body>
+</html>
