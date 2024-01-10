@@ -7,35 +7,11 @@
     </head>
     <body>
         <script>
-            function checkFileExists(soundFile, callback) {
-                var xhr = new XMLHttpRequest();
-                xhr.open('audio/HEAD', soundFile, true);
-
-                xhr.onreadystatechange = function () {
-                    if (xhr.readyState == 4) {
-                        // HTTP ステータスが 200 OK または 304 Not Modified ならファイルは存在するとみなす
-                        if (xhr.status == 200 || xhr.status == 304) {
-                            callback(true);
-                        } else {
-                            callback(false);
-                        }
-                    }
-                };
-
-                xhr.send();
-            }
             // サウンドファイルを再生する。
             function playsound(soundFile)
             {
-                checkFileExists(soundFile, function (exists) {
-                    if (exists) {
-                        var audio = new Audio(soundFile);
-                        audio.play();
-                    } else {
-                        console.error('audio/File does not exist: ' + soundFile);
-
-                    }
-                });
+                var audio = new Audio(soundFile);
+                audio.play();
             }
         </script>
         <div id="header"></div>
