@@ -25,3 +25,14 @@
 .moji:active {
 	background-color: #FFFF77;
 }
+
+.none {
+    visibility: hidden;
+    font-size: 20px;
+    color: black;
+    /* ボタンの両端を丸くする。 */
+    border-radius: 60px;
+    width : 90px;
+    height : 60px;
+    margin : 5px;
+}
